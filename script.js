@@ -69,4 +69,3 @@ printInvertedRightTriangle(5);
 
 
 
-
