@@ -88,4 +88,3 @@ printInvertedRightTriangle(5);
 
 
 
-
