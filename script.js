@@ -91,7 +91,38 @@ function printHollowSquare(size) {
   document.getElementById("hollowSquare").textContent = result;
 }
 
+// Number Triangle
+function printNumberTriangle(rows) {
+  let result = "";
+  for (let i = 1; i <= rows; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+      row += j + " ";
+    }
+    result += row.trimEnd() + "\n";
+  }
+  document.getElementById("numberTriangle").textContent = result;
+}
+
+// Number Pyramid
+function printNumberPyramid(rows) {
+  let result = "";
+  for (let i = 1; i <= rows; i++) {
+    let row = "";
+    for (let j = 1; j <= rows - i; j++) {
+      row += " ";
+    }
+    for (let k = 1; k <= i; k++) {
+      row += k + " ";
+    }
+    result += row.trimEnd() + "\n";
+  }
+  document.getElementById("numberPyramid").textContent = result;
+}
+
 // Call new functions
 printInvertedRightAlignedTriangle(5);
 printSquareOfStars(5);
 printHollowSquare(5);
+printNumberTriangle(5);
+printNumberPyramid(5);
