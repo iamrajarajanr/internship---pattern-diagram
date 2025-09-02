@@ -45,19 +45,53 @@ printStarTriangle(5);
 printRightAlignedTriangle(5);
 printInvertedRightTriangle(5);
 
+// Inverted Right-Aligned Triangle
+function printInvertedRightAlignedTriangle(rows) {
+  let result = "";
+  for (let i = rows; i >= 1; i--) {
+    let row = "";
+    for (let j = 0; j < rows - i; j++) {
+      row += " ";
+    }
+    for (let k = 0; k < i; k++) {
+      row += "*";
+    }
+    result += row + "\n";
+  }
+  document.getElementById("invertedRight").textContent = result;
+}
 
+// Square of Stars
+function printSquareOfStars(size) {
+  let result = "";
+  for (let i = 0; i < size; i++) {
+    let row = "";
+    for (let j = 0; j < size; j++) {
+      row += "* ";
+    }
+    result += row.trim() + "\n";
+  }
+  document.getElementById("square").textContent = result;
+}
 
+// Hollow Square
+function printHollowSquare(size) {
+  let result = "";
+  for (let i = 0; i < size; i++) {
+    let row = "";
+    for (let j = 0; j < size; j++) {
+      if (i === 0 || i === size - 1 || j === 0 || j === size - 1) {
+        row += "* ";
+      } else {
+        row += "  ";
+      }
+    }
+    result += row.trimEnd() + "\n";
+  }
+  document.getElementById("hollowSquare").textContent = result;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Call new functions
+printInvertedRightAlignedTriangle(5);
+printSquareOfStars(5);
+printHollowSquare(5);
