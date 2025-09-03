@@ -1,0 +1,12 @@
+@font-face {
+  font-family: asimovia;
+  src: url(Asimovian-Regular.ttf);
+}
+
+body {
+  background-image: radial-gradient(red, blue, yellow);
+  color: white;
+  text-align: center;
+  font-family: asimovia;
+  font-size: 30px;
+}
